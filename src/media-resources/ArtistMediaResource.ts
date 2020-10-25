@@ -1,5 +1,5 @@
 import {MediaResource} from './MediaResource';
-import {Artist} from '../Entities/Artist';
+import {Artist} from '../entities/Artist';
 
 export class ArtistMediaResource implements MediaResource {
   constructor(private artist: Artist) {}

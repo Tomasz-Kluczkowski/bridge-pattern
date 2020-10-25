@@ -1,12 +1,12 @@
 import {Component, OnChanges, OnInit, SimpleChanges} from '@angular/core';
-import {ARTISTS_DATA, BOOKS_DATA} from '../PseudoDatabase/Database';
-import {LongFormMediaView} from '../Views/LongFormMediaView';
-import {ArtistMediaResource} from '../MediaResources/ArtistMediaResource';
-import {Artist} from '../Entities/Artist';
-import {Book} from '../Entities/Book';
-import {BookMediaResource} from '../MediaResources/BookMediaResource';
-import {ShortFormMediaView} from '../Views/ShortFormMediaView';
-import {MediaView} from '../Views/MediaView';
+import {ARTISTS_DATA, BOOKS_DATA} from '../database-records/Database';
+import {Artist} from '../entities/Artist';
+import {Book} from '../entities/Book';
+import {ShortFormMediaView} from '../media-view-components/ShortFormMediaView';
+import {LongFormMediaView} from '../media-view-components/LongFormMediaView';
+import {BookMediaResource} from '../media-resources/BookMediaResource';
+import {ArtistMediaResource} from '../media-resources/ArtistMediaResource';
+import {MediaView} from '../media-view-components/MediaView';
 
 @Component({
   selector: 'app-root',

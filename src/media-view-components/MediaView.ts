@@ -1,4 +1,4 @@
-import {MediaResource} from '../MediaResources/MediaResource';
+import {MediaResource} from '../media-resources/MediaResource';
 
 export abstract class MediaView {
   protected constructor(protected mediaResource: MediaResource) {}

@@ -1,5 +1,5 @@
 import {MediaResource} from './MediaResource';
-import {Book} from '../Entities/Book';
+import {Book} from '../entities/Book';
 
 export class BookMediaResource implements MediaResource {
   constructor(private book: Book) {}

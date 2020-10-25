@@ -1,5 +1,5 @@
 import {MediaView} from './MediaView';
-import {MediaResource} from '../MediaResources/MediaResource';
+import {MediaResource} from '../media-resources/MediaResource';
 
 export class LongFormMediaView extends MediaView {
   constructor(mediaResource: MediaResource) {
