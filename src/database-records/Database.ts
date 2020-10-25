@@ -14,7 +14,7 @@ export const BOOKS_DATA = [
     id: 'sdfwef-ssdfw3',
     backCoverText: 'Back cover text for book 2',
     storeId: 'asdae-sdfseg-121sw',
-    frontCoverUrl: 'https://assets.teenvogue.com/photos/5cd4384fac4d9e712fe2ebb0/2:3/w_1852,h_2778,c_limit/The%20Gravity%20of%20Us_.jpg',
+    frontCoverUrl: 'https://cdn.pastemagazine.com/www/system/images/photo_albums/best-book-covers-fall-2019/large/bbcdune.jpg?1384968217',
     tile: 'No Pattern No Gain'
   },
 ];

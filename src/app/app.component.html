@@ -339,13 +339,18 @@
   </div>
   <hr>
 
-  <div>View Type: {{this.viewType}} | Media Type: {{this.mediaResourceType}}</div>
-
-  <router-outlet (activate)="onOutletLoaded($event)"></router-outlet>
-
+  <div>View Type: {{this.viewType}} | Media Type: {{this.entityType}}</div>
+  <nav>
+    <a routerLink="/long-media-view" routerLinkActive="active" (click)="setViewType('long')">Long Media View</a>
+    <span> | </span>
+    <a routerLink="/short-media-view" routerLinkActive="active" (click)="setViewType('short')">Short Media View</a>
+  </nav>
+  <hr>
+  <router-outlet></router-outlet>
+  <hr>
 
   <div>
-    <button (click)="toggleMediaResourceType()">Toggle Media Type</button>
+    <button (click)="toggleEntityType()">Toggle Media Type</button>
   </div>
 
   <svg id="clouds" alt="Gray Clouds Background" xmlns="http://www.w3.org/2000/svg" width="2611.084" height="485.677" viewBox="0 0 2611.084 485.677">

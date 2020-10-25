@@ -1,9 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {getAllMediaDataForEntityType} from '../database-records/Database';
-import {BookMediaResource} from '../media-resources/BookMediaResource';
-import {ArtistMediaResource} from '../media-resources/ArtistMediaResource';
-import {MediaResource} from '../media-resources/MediaResource';
-import {AbstractMediaViewComponent} from './media-view-components/abstract-media-view/abstract-media-view.component';
+import {DataService} from './services/data.service';
 
 @Component({
   selector: 'app-root',
@@ -12,33 +8,22 @@ import {AbstractMediaViewComponent} from './media-view-components/abstract-media
 })
 export class AppComponent implements OnInit {
   viewType = 'short';
-  mediaResourceType = 'book';
-  mediaResources: Array<MediaResource>;
+  entityType = 'book';
 
-  title = 'bridge-pattern';
+  title = 'Bridge Pattern Example Code';
 
-  mediaResourceTypes = {
-    book: BookMediaResource,
-    artist: ArtistMediaResource
-  };
+  constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
-    this.mediaResources = this.getMediaResources();
+    this.dataService.setEntityType(this.entityType);
   }
 
-  getMediaResources(): Array<MediaResource> {
-    const allMediaDataForEntityType = getAllMediaDataForEntityType(this.mediaResourceType);
-    return allMediaDataForEntityType.map(
-      mediaData => new this.mediaResourceTypes[this.mediaResourceType](mediaData)
-    );
+  toggleEntityType(): void {
+    this.entityType = this.entityType === 'book' ? 'artist' : 'book';
+    this.dataService.setEntityType(this.entityType);
   }
 
-  toggleMediaResourceType(): void {
-    this.mediaResourceType = this.mediaResourceType === 'book' ? 'artist' : 'book';
-    this.mediaResources = this.getMediaResources();
-  }
-
-  onOutletLoaded(component: AbstractMediaViewComponent): void {
-    component.mediaResources = this.mediaResources;
+  setViewType(viewType: string): void {
+    this.viewType = viewType;
   }
 }
