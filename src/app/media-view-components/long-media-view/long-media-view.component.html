@@ -1,0 +1,7 @@
+<div *ngFor="let mediaResource of mediaResources">
+  <h2>{{mediaResource.getTitle()}}</h2>
+  <div><img src="{{mediaResource.getImageUrl()}}" alt="featured image" class="image-large"></div>
+  <div>{{mediaResource.getDescription()}}</div>
+  <a href="{{this.mediaResource.getUrl()}}">Show more...</a>
+  <hr>
+</div>

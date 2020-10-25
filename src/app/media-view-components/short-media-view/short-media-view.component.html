@@ -1,0 +1,4 @@
+<div *ngFor="let mediaResource of mediaResources">
+  <div>{{mediaResource.getTitle()}}</div>
+  <a href="{{this.mediaResource.getUrl()}}">Details</a>
+</div>

@@ -339,16 +339,13 @@
   </div>
   <hr>
 
-  <div>View Type: {{this.viewType}} | Media Type: {{this.mediaResourceType}} | Media Number: {{this.mediaResourceNumber}}</div>
+  <div>View Type: {{this.viewType}} | Media Type: {{this.mediaResourceType}}</div>
 
-  <hr>
-  <div [innerHTML]="viewHTML" class="media-content"></div>
-  <hr>
+  <router-outlet (activate)="onOutletLoaded($event)"></router-outlet>
+
 
   <div>
-    <button (click)="toggleViewType()">Toggle View Type</button>
     <button (click)="toggleMediaResourceType()">Toggle Media Type</button>
-    <button (click)="toggleMediaResourceNumber()">Toggle Media Number</button>
   </div>
 
   <svg id="clouds" alt="Gray Clouds Background" xmlns="http://www.w3.org/2000/svg" width="2611.084" height="485.677" viewBox="0 0 2611.084 485.677">

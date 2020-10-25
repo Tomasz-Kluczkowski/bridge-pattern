@@ -1,10 +1,15 @@
-export class Book {
+import {Entity} from './Entity';
+
+export class Book extends Entity {
   constructor(
+    private id: string,
     private backCoverText: string,
     private storeId: string,
     private frontCoverUrl: string,
     private title: string,
-  ) {}
+  ) {
+    super(id);
+  }
 
 
   public getBackCoverText(): string {
